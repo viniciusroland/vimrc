@@ -12,7 +12,7 @@ map <C-up> :tabr<cr>
 map <C-down> :tabl<cr>
 map <C-left> :tabp<cr>
 map <C-right> :tabn<cr>
-set tabstop=2 shiftwidth=2
+set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 set noshowmode
 set hlsearch
 set incsearch
@@ -37,6 +37,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'itchyny/lightline.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'ayu-theme/ayu-vim'
+" Plugin 'rstacruz/sparkup'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
