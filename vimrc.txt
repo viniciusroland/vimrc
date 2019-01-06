@@ -1,3 +1,7 @@
+set nocp
+let g:user_emmet_leader_key = '<tab>'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 syntax on
 set background=dark
 colorscheme pablo
@@ -37,7 +41,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'itchyny/lightline.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'ayu-theme/ayu-vim'
-" Plugin 'rstacruz/sparkup'
+Plugin 'mattn/emmet-vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
