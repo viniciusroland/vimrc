@@ -4,7 +4,7 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 syntax on
 set background=dark
-colorscheme pablo
+"colorscheme pablo
 set laststatus=2
 set relativenumber
 set nocompatible              " be iMproved, required
@@ -42,6 +42,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'ayu-theme/ayu-vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'rafi/awesome-vim-colorschemes'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -61,6 +62,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+colorscheme afterglow
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
