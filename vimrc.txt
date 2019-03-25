@@ -1,7 +1,8 @@
 set nocp
-let g:user_emmet_leader_key = '<tab>'
+"let g:user_emmet_leader_key = '<tab>'
+let g:user_emmet_leader_key = '<C-W>'
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType htmldjango,html,css EmmetInstall
 syntax on
 set background=dark
 "colorscheme pablo
@@ -43,6 +44,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'ayu-theme/ayu-vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'rafi/awesome-vim-colorschemes'
+Plugin 'terryma/vim-multiple-cursors'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
