@@ -9,9 +9,15 @@ if has("autocmd")
 \ endif
 au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 endif
+
 "let g:user_emmet_leader_key = '<tab>'
 let g:user_emmet_leader_key = '<C-W>'
 let g:user_emmet_install_global = 0
+let @p='A,j0'
+let @q='i''lxA'',j0'
+command Virgula 10000@p
+command Aspas 10000@q
+command! F :execute '%!python -c "import json,sys,collections,re; sys.stdout.write(re.sub(r\"\\\u[0-9a-f]{4}\", lambda m:m.group().decode(\"unicode_escape\").encode(\"utf-8\"),json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), indent=2)))"'
 autocmd FileType htmldjango,html,css EmmetInstall
 syntax on
 set background=dark
@@ -23,6 +29,8 @@ command! W :w
 command! Q :q
 noremap j gj
 noremap k gk
+noremap M 1000@q
+noremap m 1000@p
 map <C-up> :tabr<cr>
 map <C-down> :tabl<cr>
 map <C-left> :tabp<cr>
@@ -63,6 +71,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'morhetz/gruvbox'
+Plugin 'elixir-editors/vim-elixir'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -72,6 +81,9 @@ Plugin 'git://git.wincent.com/command-t.git'
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
+Plugin 'dart-lang/dart-vim-plugin'
+Plugin 'thosakwe/vim-flutter'
+Plugin 'OmniSharp/omnisharp-vim'
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
